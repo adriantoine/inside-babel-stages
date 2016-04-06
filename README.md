@@ -4,7 +4,7 @@ I usually don't use Babel stages as I don't use all the features of all stages, 
 
 It's interesting as I think that most people don't need stage 0 and there are some stage 0 proposals like [function bind](https://github.com/zenparsing/es-function-bind) that I've never heard of and I've never seen a tutorial about them.
 
-If you have useful links about each feature, let me know, I'll update the document.
+If you have useful links about each feature, open a PR or an issue.
 
 # [Stage 0](https://github.com/babel/babel/blob/master/packages/babel-preset-stage-0/index.js)
 
