@@ -87,7 +87,7 @@ class MyClass {
 
   constructor() {
     console.log(this.myProp); // Prints '42'
-    console.log(MyClass.myStaticProp); // Prints '42'
+    console.log(MyClass.myStaticProp); // Prints '21'
   }
 }
 ```
