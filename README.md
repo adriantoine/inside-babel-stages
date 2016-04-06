@@ -10,6 +10,8 @@ If you have useful links about each feature, open a PR or an issue.
 
 ### [Do expressions](https://babeljs.io/docs/plugins/syntax-do-expressions/) ([`babel-plugin-transform-do-expressions`](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-do-expressions))
 ```js
+// from https://gist.github.com/DmitrySoshnikov/de4727f57c5acc17e9469d1a91743125
+
 let x = 10;
 
 let a = do {
@@ -40,6 +42,8 @@ if (x == 10) {
 
 ### [Function bind](https://babeljs.io/docs/plugins/syntax-function-bind/) ([`babel-plugin-transform-function-bind`](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-function-bind))
 ```js
+// from https://babeljs.io/blog/2015/05/14/function-bind
+
 import { map, takeWhile, forEach } from "iterlib";
 
 getPlayers()
