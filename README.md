@@ -9,11 +9,54 @@ If you have useful links about each feature, open a PR or an issue.
 # [Stage 0](https://github.com/babel/babel/blob/master/packages/babel-preset-stage-0/index.js)
 
 ### [Do expressions](https://babeljs.io/docs/plugins/syntax-do-expressions/) ([`babel-plugin-transform-do-expressions`](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-do-expressions))
+```js
+let x = 10;
+
+let a = do {
+  if (x == 10) {
+    100;
+  } else if (x > 10) {
+    200;
+  } else {
+    300;
+  }
+};
+
+// equivalent
+let a, x = 10;
+
+if (x == 10) {
+  a = 100;
+} else if (x > 10) {
+  a = 200;
+} else {
+  a = 300;
+}
+
+```
   - [Proposal](http://wiki.ecmascript.org/doku.php?id=strawman:do_expressions)
   - [More info](https://gist.github.com/DmitrySoshnikov/de4727f57c5acc17e9469d1a91743125)
   - Very handy for conditions inside JSX: https://github.com/reactjs/react-future/issues/35#issuecomment-120009203
 
 ### [Function bind](https://babeljs.io/docs/plugins/syntax-function-bind/) ([`babel-plugin-transform-function-bind`](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-function-bind))
+```js
+import { map, takeWhile, forEach } from "iterlib";
+
+getPlayers()
+::map(x => x.character())
+::takeWhile(x => x.strength > 100)
+::forEach(x => console.log(x));
+
+// equivalent
+
+import { map, takeWhile, forEach } from "iterlib";
+
+let _val;
+_val = getPlayers();
+_val = map.call(_val, x => x.character());
+_val = takeWhile.call(_val, x => x.strength > 100);
+_val = forEach.call(_val, x => console.log(x));
+```
   - [Proposal](https://github.com/zenparsing/es-function-bind)
   - [Babel blog post](https://babeljs.io/blog/2015/05/14/function-bind)
 
