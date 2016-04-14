@@ -1,4 +1,4 @@
-The aim of this gist is to provide information (at least the ES proposal) around babel plugins, all in one page to avoid going back and forth in Babel documentation and ES propoals and specs. It's grouped by stages so you know what you have when you use babel stages.
+The aim of this page is to provide information (at least the ES proposal) around babel plugins, all in one page to avoid going back and forth in Babel documentation and ES propoals and specs. It's grouped by stages so you know what you have when you use babel stages.
 
 I usually don't use Babel stages as I don't use all the features of all stages, I include the plugins of the features I want, it makes my npm install quicker and small and it helps tracking which feature I have.
 
